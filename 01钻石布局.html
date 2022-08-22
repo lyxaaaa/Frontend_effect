@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>钻石布局</title>
+<style>
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(235, 151, 151);
+}
+.shell{
+    /* 网格布局 */
+    display: grid;
+    /* 内边距20px */
+    padding: 20px;
+    /* 每一列的宽度自动填满，不小于250px 不大于1fr */
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    /* 规定每一行270px */
+    grid-auto-rows: 270px;
+    /* 设置间距gap */
+    gap: 20px;
+    /* 自动填充 */
+    grid-auto-flow: dense;
+}
+.shell>div{
+    position: relative;
+    background-color: black;
+    border-radius: 5px;
+}
+.shell span{
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    color: aliceblue;
+    font: 100 100px 'Kristen ITC';
+    /* 给文字加个阴影 */
+    text-shadow: -5px 0 rgb(0, 0, 0), 0 -5px rgb(0, 0, 0),5px 0 rgb(0, 0, 0),0 5px rgb(0, 0, 0);
+}
+.tall{
+    grid-row: span 2;
+}
+.wide{
+    grid-column: span 2;
+}
+.big{
+    grid-column: span 2;
+    grid-row: span 2;
+}
+</style>
+</head>
+<body>
+    <div class="shell">
+        <div class="tall"><span>1</span></div>
+        <div><span>2</span></div>
+        <div><span>3</span></div>
+        <div class="wide"><span>4</span></div>
+        <div><span>5</span></div>
+        <div class="tall"><span>6</span></div>
+        <div class="big"><span>7</span></div>
+        <div><span>8</span></div>
+        <div class="wide"><span>9</span></div>
+        <div class="big"><span>10</span></div>
+        <div class="tall"><span>11</span></div>
+        <div><span>12</span></div>
+        <div><span>13</span></div>
+        <div><span>14</span></div>
+        <div><span>15</span></div>
+        <div class="wide"><span>16</span></div>
+        <div><span>17</span></div>
+        <div><span>18</span></div>
+        <div class="wide"><span>19</span></div>
+        <div><span>20</span></div>
+        <div class="wide"><span>21</span></div>
+        <div class="big"><span>22</span></div>
+        <div><span>23</span></div>
+        <div><span>24</span></div>
+        <div class="big"><span>25</span></div>
+        <div class="tall"><span>26</span></div>
+        <div><span>27</span></div>
+        <div><span>28</span></div>
+        <div><span>29</span></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    box-sizing: border-box;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    position: absolute;
+    top: 15vh;
+    width: 280px;
+    height: 350px;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: rgb(17, 17, 17);
+    border-radius: 10px;
+}
+.content{
+    width: 250px;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 10px;
+    margin-left: 10px;
+}
+/* 显示框 */
+.getin{
+    width: 200px;
+    height: 40px;
+    padding-right: 5px;
+    margin-left: 12px;
+    text-decoration: none;
+    outline: none;
+    text-align: right;
+    font-size: larger;
+    margin-bottom: 15px;
+    background-color: rgb(249, 211, 164);
+    border-radius: 8px;
+}
+span{
+    width: 50px;
+    height: 32px;
+    /* 使字符居中 */
+    text-align: center;
+    line-height: 30px;
+    color: aliceblue;
+    background-color: rgb(109, 108, 108);
+    border-radius: 3px;
+    /* 字符和盒子阴影 */
+    text-shadow: 1px 1px rgb(64, 64, 64);
+    box-shadow: -2px -1px 2px rgb(16, 15, 15) inset;
+    cursor: pointer;
+    font-size: larger;
+}
+.ac{
+    width: 130px;
+    margin-left: 2px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}

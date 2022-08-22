@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>木犀团队</title>
+    <style>
+        body{
+            background-color: #3c3c46;
+            display: flex;
+            justify-content: center;
+        }
+        .container{
+            position: relative;
+            top:250px;
+            font: 900 100px '';
+            color: #333;
+            cursor: pointer;
+        }
+        .container span{
+            /* 动画过渡时间 */
+            transition: .5s;
+            /* 动画延迟时间 */
+            transition-delay: calc(var(--i)*.1s);
+        }
+        .container:hover span{
+            color:#fff;
+            text-shadow: 0 0 10px #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span style="--i:1">木</span>
+        <span style="--i:2">犀</span>
+        <span style="--i:3">团</span>
+        <span style="--i:4">队</span>
+    </div>
+</body>
+</html>
